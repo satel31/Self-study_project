@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "self-study-project"
+version = "0.1.0"
+description = ""
+authors = ["satel31 <blokhnina.tatiana@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "self_study_project"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.5"
+djangorestframework = "^3.14.0"
+python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
