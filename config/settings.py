@@ -134,7 +134,7 @@ STATIC_ROOT = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Registration of users
-#AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'user.User'
 
 # Images
 MEDIA_URL = '/media/'
