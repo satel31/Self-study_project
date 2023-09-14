@@ -37,6 +37,7 @@ class Material(models.Model):
 class Test(models.Model):
     test_name = models.CharField(max_length=255, verbose_name='Test name')
     description = models.TextField(verbose_name='Test description')
+    material = models.ForeignKey(Material, on_delete=models.CASCADE, verbose_name='Material of the test', **NULLABLE, related_name='tests')
 
     def __str__(self):
         return f'{self.test_name}'
@@ -83,7 +84,6 @@ class Try(models.Model):
         verbose_name = 'try'
         verbose_name_plural = 'tries'
 
-# Подписка (?) (поля: привязка к пользователю, привящка к материалу)
 class Subscription(models.Model):
     material = models.ForeignKey(Material, on_delete=models.CASCADE, verbose_name='Material')
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='User')
