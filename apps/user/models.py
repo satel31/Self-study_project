@@ -2,7 +2,6 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-# Пользователь (менеджер и простой) (поля: имя, фамилия, емейл, город, аватар, телефон, пароль, телеграм)
 NULLABLE = {'blank': True, 'null': True}
 
 
