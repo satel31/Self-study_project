@@ -1,4 +1,6 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
+from rest_framework.filters import OrderingFilter
 from rest_framework.permissions import IsAuthenticated
 
 from apps.learning.models import Test
@@ -15,6 +17,9 @@ class TestListAPIView(generics.ListAPIView):
     serializer_class = TestSerializer
     queryset = Test.objects.all()
     permission_classes = [IsAuthenticated]
+    filter_backends = [OrderingFilter, DjangoFilterBackend]
+    ordering_fields = ['test_name', 'material']
+    filterset_fields = ('test_name', 'material',)
 
 
 class TestDetailAPIView(generics.RetrieveAPIView):

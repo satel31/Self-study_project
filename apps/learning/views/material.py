@@ -1,4 +1,6 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
+from rest_framework.filters import OrderingFilter
 from rest_framework.permissions import IsAuthenticated
 
 from apps.learning.models import Material
@@ -15,6 +17,9 @@ class MaterialListAPIView(generics.ListAPIView):
     serializer_class = MaterialSerializer
     queryset = Material.objects.all()
     permission_classes = [IsAuthenticated]
+    filter_backends = [OrderingFilter, DjangoFilterBackend]
+    ordering_fields = ['material_name', 'section']
+    filterset_fields = ('material_name', 'section',)
 
 
 class MaterialDetailAPIView(generics.RetrieveAPIView):

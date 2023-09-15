@@ -1,4 +1,6 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
+from rest_framework.filters import OrderingFilter
 from rest_framework.permissions import IsAuthenticated
 
 from apps.learning.permissions import ModeratorPermission
@@ -17,6 +19,9 @@ class SectionListAPIView(generics.ListAPIView):
     pagination_class = SectionPagination
     queryset = Section.objects.all()
     permission_classes = [IsAuthenticated]
+    filter_backends = [OrderingFilter, DjangoFilterBackend]
+    ordering_fields = ['section_name']
+    filterset_fields = ('section_name',)
 
 
 class SectionDetailAPIView(generics.RetrieveAPIView):
