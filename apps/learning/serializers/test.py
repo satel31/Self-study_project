@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from rest_framework.request import Request
 
 from apps.learning.models import Test, Question, UserAnswer
 from apps.learning.serializers.question import QuestionSerializer
@@ -13,11 +14,15 @@ class TestSerializer(serializers.ModelSerializer):
         return Question.objects.filter(test=test.pk).count()
 
     def get_right_answers(self, test):
+        current_user = self.context['request'].user
         right_answers = 0
         questions = Question.objects.filter(test=test.pk)
         for question in questions:
-            if UserAnswer.objects.filter(question=question.pk).last().is_passed:
-                right_answers += 1
+            try:
+                if UserAnswer.objects.filter(question=question.pk, user=current_user).last().is_passed:
+                    right_answers += 1
+            except AttributeError:
+                pass
         return right_answers
 
     class Meta:
