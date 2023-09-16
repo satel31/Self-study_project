@@ -21,6 +21,7 @@ class UserListAPIView(generics.ListAPIView):
     serializer_class = StrangerUserSerializer
     permission_classes = [IsAuthenticated]
 
+
 class UserDetailAPIView(generics.RetrieveAPIView):
     """Получение конкретного пользователя по его pk.
        Доступно только для авторизованных пользователей."""

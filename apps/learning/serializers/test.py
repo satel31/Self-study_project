@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from rest_framework.request import Request
 
 from apps.learning.models import Test, Question, UserAnswer
 from apps.learning.serializers.question import QuestionSerializer
