@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
+from datetime import timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -42,6 +43,10 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
+    'rest_framework_simplejwt',
+    'django_filters',
+    'corsheaders',
+    'drf_yasg',
 ]
 
 USER_APPS = [
@@ -59,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -134,10 +140,35 @@ STATIC_ROOT = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Registration of users
-#AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'user.User'
 
 # Images
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# Settings for JWT
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+    'DEFAULT_FILTER_BACKENDS': [
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ],
+}
 
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+}
+
+# Settings for cors
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+]
+
+CORS_ALLOW_ALL_ORIGINS = False

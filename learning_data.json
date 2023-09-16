@@ -1,0 +1,256 @@
+[
+  {
+    "model": "learning.section",
+    "pk": 3,
+    "fields": {
+      "section_name": "Bestiary",
+      "preview": "",
+      "description": "Theory and practice of monsters"
+    }
+  },
+  {
+    "model": "learning.section",
+    "pk": 4,
+    "fields": {
+      "section_name": "PE",
+      "preview": "",
+      "description": "Physical education"
+    }
+  },
+  {
+    "model": "learning.section",
+    "pk": 5,
+    "fields": {
+      "section_name": "Magic and signs",
+      "preview": "",
+      "description": "Theory of magic and practice of signs"
+    }
+  },
+  {
+    "model": "learning.material",
+    "pk": 4,
+    "fields": {
+      "material_name": "Beasts",
+      "description": "Beasts from Beauclair, Big Bad Wolf and others",
+      "preview": "",
+      "text": "Witnesses of monster attacks always have difficulty describing our monster. Monsters are usually fast and often hunt at night, while the witnesses themselves, as a rule, are overwhelmed with horror and are busy fleeing. Usually the witcher does not know what kind of creature he will have to deal with until he finds traces and establishes it himself. It was exactly the same with Bestia, who kept all of Beauclair in fear...",
+      "section": 3
+    }
+  },
+  {
+    "model": "learning.material",
+    "pk": 5,
+    "fields": {
+      "material_name": "Vampires",
+      "description": "Bruxa, Alp and others",
+      "preview": "",
+      "text": "Fortunately for everyone, bruxes are extremely rare creatures. Many of them live far from crowded places, because these monsters are very concerned about their own safety and choose places for their lair where it is difficult to take them by surprise. Those of them that decide to live among people avoid crowded places and often come out of hiding at night. Several details distinguish them from belated passers-by: friendship with birds, a shrill voice. Remarkable speed of movement. Brooks are distinguished by superhuman strength and speed, but their greatest advantage is due to the ability to become invisible...",
+      "section": 3
+    }
+  },
+  {
+    "model": "learning.material",
+    "pk": 6,
+    "fields": {
+      "material_name": "Hybrids",
+      "description": "Harpy, Griffin and others",
+      "preview": "",
+      "text": "It is difficult to say what is more disgusting about harpies and their related shishigas. Their terrible appearance, the stench of carrion and bird droppings emanating from them, or the shrill squeaking sound they make. Suffice it to say that even rats, accustomed to frolicking in sewers and garbage dumps, avoid their nests...",
+      "section": 3
+    }
+  },
+  {
+    "model": "learning.material",
+    "pk": 7,
+    "fields": {
+      "material_name": "Strong style of fighting",
+      "description": null,
+      "preview": "",
+      "text": "Hitting hard and heavy... of all the witcher fighting styles, this deals the most damage in a single blow to one opponent. The downside is its slowness; the enemy may be quick enough to slip in a debilitating blow of their own while the witcher is just preparing to strike. But against knights and necrophages, creatures with thick skin or tough armour, Strong Style cuts the fighting time to a much more bearable length.As dexterity improves, added attack efficiency renders Strong Style much more useful against swift opponents (see Fast style).",
+      "section": 4
+    }
+  },
+  {
+    "model": "learning.material",
+    "pk": 8,
+    "fields": {
+      "material_name": "Fast style of fighting",
+      "description": null,
+      "preview": "",
+      "text": "This style is a must when facing quick and agile opponents, like ghosts and vampires. However, it is relatively useful against heavier opponents like necrophages, too, because the blows landing in quick succession leave them precious little time to retaliate. This also means that the fights may become drawn out, the witcher 'bleeding' his opponent with nicks and shallow cuts.",
+      "section": 4
+    }
+  },
+  {
+    "model": "learning.material",
+    "pk": 9,
+    "fields": {
+      "material_name": "Group style of fighnting",
+      "description": null,
+      "preview": "",
+      "text": "When surrounded by a multitude of creatures, this style shines. Its beautiful, circular moves make sure that every single one of the surrounding opponents gets hit (and with upgrades, grants a considerable chance of knocking them down). The Viroledan should be used with consideration; even though certain foes (like drowners) fall under the dancing blade like leaves, there are also monsters in the midst of which the Group Style is not recommended (such as exploding bloedzuigers and cemetaurs). When facing mixed groups, it is best to target the weakest enemy, where the chances of missing are the smallest. ",
+      "section": 4
+    }
+  },
+  {
+    "model": "learning.material",
+    "pk": 10,
+    "fields": {
+      "material_name": "Aard",
+      "description": "Aard is a simple magical sign used by witchers.",
+      "preview": "",
+      "text": "It is comprised of a telekinetic thrust that can stun, repel, knock down, or disarm opponents, as well as remove barriers and other objects.",
+      "section": 5
+    }
+  },
+  {
+    "model": "learning.material",
+    "pk": 11,
+    "fields": {
+      "material_name": "Igni",
+      "description": "Igni is a simple magical sign used by witchers.",
+      "preview": "",
+      "text": "It is comprised of a pyrokinetic burst that can repel and ignite opponents, as well as start fires.",
+      "section": 5
+    }
+  },
+  {
+    "model": "learning.material",
+    "pk": 12,
+    "fields": {
+      "material_name": "Quen",
+      "description": "Quen is a simple magical sign used by witchers.",
+      "preview": "",
+      "text": "When cast it forms a protective shield in front of the caster, protecting the witcher from sonic waves and similar attacks from that angle. Its expanded form can protect from the wider range of offensive actions. Contrary to Heliotrop, which is active only for a moment and cushions from a single powerful attack, Quen is active until broken or dispelled.",
+      "section": 5
+    }
+  },
+  {
+    "model": "learning.test",
+    "pk": 4,
+    "fields": {
+      "test_name": "Vampires Test",
+      "description": "Check you knowledge of vampires",
+      "material": 5
+    }
+  },
+  {
+    "model": "learning.test",
+    "pk": 5,
+    "fields": {
+      "test_name": "Basic Witcher Signs (Quen)",
+      "description": "Check how well you know sign Quen",
+      "material": 12
+    }
+  },
+  {
+    "model": "learning.question",
+    "pk": 4,
+    "fields": {
+      "test": 4,
+      "text": "Who is more dangerous: Bruxa or Catakan?"
+    }
+  },
+  {
+    "model": "learning.question",
+    "pk": 5,
+    "fields": {
+      "test": 4,
+      "text": "Name two high vampires"
+    }
+  },
+  {
+    "model": "learning.question",
+    "pk": 6,
+    "fields": {
+      "test": 4,
+      "text": "Who is more dangerous: high vampire or bruxa?"
+    }
+  },
+  {
+    "model": "learning.question",
+    "pk": 7,
+    "fields": {
+      "test": 5,
+      "text": "Which sign is used as a shield: Quen or Igni?"
+    }
+  },
+  {
+    "model": "learning.question",
+    "pk": 8,
+    "fields": {
+      "test": 5,
+      "text": "Which sign is effective against everyone?"
+    }
+  },
+  {
+    "model": "learning.answer",
+    "pk": 2,
+    "fields": {
+      "question": 4,
+      "text": "Bruxa"
+    }
+  },
+  {
+    "model": "learning.answer",
+    "pk": 3,
+    "fields": {
+      "question": 5,
+      "text": "Regis, Detlaff"
+    }
+  },
+  {
+    "model": "learning.answer",
+    "pk": 4,
+    "fields": {
+      "question": 6,
+      "text": "High vampire"
+    }
+  },
+  {
+    "model": "learning.answer",
+    "pk": 5,
+    "fields": {
+      "question": 7,
+      "text": "Quen"
+    }
+  },
+  {
+    "model": "learning.answer",
+    "pk": 6,
+    "fields": {
+      "question": 8,
+      "text": "Quen"
+    }
+  },
+  {
+    "model": "learning.useranswer",
+    "pk": 16,
+    "fields": {
+      "answer": "quen",
+      "user": 3,
+      "question": 7,
+      "is_passed": true
+    }
+  },
+  {
+    "model": "learning.useranswer",
+    "pk": 17,
+    "fields": {
+      "answer": "Quen",
+      "user": 3,
+      "question": 8,
+      "is_passed": true
+    }
+  },
+  {
+    "model": "learning.useranswer",
+    "pk": 18,
+    "fields": {
+      "answer": "Katakan",
+      "user": 6,
+      "question": 4,
+      "is_passed": false
+    }
+  }
+]

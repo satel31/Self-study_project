@@ -1,0 +1,90 @@
+[
+  {
+    "model": "user.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$PjcjTnG0IcNrV6tlRmVLaK$p2LPki29q9lNTLj+ajleQwUQrpW+rR5S1txn0r1qheI=",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-15T19:44:45.941Z",
+      "first_name": "Geralt",
+      "last_name": "of_Rivia",
+      "email": "geralt@yandex.ru",
+      "city": "Kaer Morhen",
+      "avatar": "",
+      "phone": null,
+      "telegram": "@geralt_of_rivia",
+      "role": "member",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "user.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$OanB1AodXDcfvoGpI9QWYf$9wL/nyfGgjTTWgQ9Zkumdv2NYwriIIiP9P7j0Os6EE8=",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-15T19:45:06.668Z",
+      "first_name": "Vesemir",
+      "last_name": null,
+      "email": "vesemir@yandex.ru",
+      "city": "Kaer Morhen",
+      "avatar": "",
+      "phone": null,
+      "telegram": "@vesemir",
+      "role": "moderator",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "user.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$RLKnzHGtsnp2M2ugEM2HDc$XMS5shkC8pRJeqrp7JeJw3LsbMJJ6SsvW6TMMbVLWOk=",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-15T19:45:20.236Z",
+      "first_name": "Lambert",
+      "last_name": null,
+      "email": "LambertTheCool@yandex.ru",
+      "city": "Kaer Morhen",
+      "avatar": "",
+      "phone": null,
+      "telegram": "@lambert_lambert",
+      "role": "member",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "user.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$xrGXSqTMr3WRcMvLEOAIp3$5anUVSsGSkl68E5OZdGw/87fj43wwo9TSw3miIr5U5A=",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-09-15T19:45:30.053Z",
+      "first_name": "Cirilla",
+      "last_name": "Riannon",
+      "email": "Ciri@yandex.ru",
+      "city": "Cintra",
+      "avatar": "",
+      "phone": null,
+      "telegram": "",
+      "role": "member",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
