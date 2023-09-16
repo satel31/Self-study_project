@@ -37,7 +37,8 @@ class Material(models.Model):
 class Test(models.Model):
     test_name = models.CharField(max_length=255, verbose_name='Test name')
     description = models.TextField(verbose_name='Test description')
-    material = models.ForeignKey(Material, on_delete=models.CASCADE, verbose_name='Material of the test', **NULLABLE, related_name='tests')
+    material = models.ForeignKey(Material, on_delete=models.CASCADE, verbose_name='Material of the test', **NULLABLE,
+                                 related_name='tests')
 
     def __str__(self):
         return f'{self.test_name}'
@@ -60,7 +61,7 @@ class Question(models.Model):
 
 
 class Answer(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name='Question',)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name='Question', )
     text = models.CharField(max_length=500, verbose_name='Text of the answer')
 
     def __str__(self):
@@ -74,7 +75,8 @@ class Answer(models.Model):
 class UserAnswer(models.Model):
     answer = models.CharField(max_length=500, verbose_name='Text of the answer')
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='User', **NULLABLE)
-    question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name='Question', related_name='user_answers')
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name='Question',
+                                 related_name='user_answers')
     is_passed = models.BooleanField(default=False, verbose_name='Is passed')
 
     def __str__(self):
