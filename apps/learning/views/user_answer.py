@@ -10,7 +10,7 @@ class UserAnswerCreateAPIView(generics.CreateAPIView):
        Для создания ответа необходимо ввести текст ответа и pk вопроса.
        Доступно только для авторизованных пользователей."""
     serializer_class = UserAnswerSerializer
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]
 
     def perform_create(self, serializer):
         new_ans = serializer.save()
@@ -28,4 +28,4 @@ class UserAnswerDeleteAPIView(generics.DestroyAPIView):
     """Удаление ответа пользователя.
        Доступно только для авторизованных пользователей."""
     queryset = UserAnswer.objects.all()
-    permission_classes = [IsAuthenticated]
+    #permission_classes = [IsAuthenticated]

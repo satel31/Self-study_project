@@ -52,7 +52,7 @@ class Question(models.Model):
     text = models.CharField(max_length=500, verbose_name='Text of the question')
 
     def __str__(self):
-        return f"Question of {self.test}"
+        return f'Question of {self.test}'
 
     class Meta:
         verbose_name = 'question'
@@ -64,7 +64,7 @@ class Answer(models.Model):
     text = models.CharField(max_length=500, verbose_name='Text of the answer')
 
     def __str__(self):
-        return f'Question of {self.question}'
+        return f'Answer of {self.question}'
 
     class Meta:
         verbose_name = 'answer'
