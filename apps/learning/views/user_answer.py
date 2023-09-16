@@ -6,6 +6,9 @@ from apps.learning.serializers.user_answer import UserAnswerSerializer
 
 
 class UserAnswerCreateAPIView(generics.CreateAPIView):
+    """Создание ответа пользователя на вопрос.
+       Для создания ответа необходимо ввести текст ответа и pk вопроса.
+       Доступно только для авторизованных пользователей."""
     serializer_class = UserAnswerSerializer
     permission_classes = [IsAuthenticated]
 
@@ -22,5 +25,7 @@ class UserAnswerCreateAPIView(generics.CreateAPIView):
 
 
 class UserAnswerDeleteAPIView(generics.DestroyAPIView):
+    """Удаление ответа пользователя.
+       Доступно только для авторизованных пользователей."""
     queryset = UserAnswer.objects.all()
     permission_classes = [IsAuthenticated]
