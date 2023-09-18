@@ -6,7 +6,7 @@ NULLABLE = {'blank': True, 'null': True}
 
 
 class Section(models.Model):
-    section_name = models.CharField(max_length=235, verbose_name='Section name')
+    section_name = models.CharField(max_length=235, verbose_name='Section name', unique=True)
     preview = models.ImageField(upload_to='sections/', verbose_name='Sections preview', **NULLABLE)
     description = models.TextField(verbose_name='Section description', **NULLABLE)
 
@@ -19,7 +19,7 @@ class Section(models.Model):
 
 
 class Material(models.Model):
-    material_name = models.CharField(max_length=235, verbose_name='Material name')
+    material_name = models.CharField(max_length=235, verbose_name='Material name', unique=True)
     description = models.TextField(verbose_name='Material description', **NULLABLE)
     preview = models.ImageField(upload_to='materials/', verbose_name='Material preview', **NULLABLE)
     text = models.TextField(verbose_name='Material text')
