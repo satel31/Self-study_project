@@ -20,7 +20,7 @@ class SectionTestCase(APITestCase):
     def test_1_create_section(self):
         """Section creation testing """
         data = {
-            'section_name': 'test',
+            'section_name': 'test1',
             'description': 'test',
         }
         response = self.client.post(f'{self.url}add_section/', data=data)
